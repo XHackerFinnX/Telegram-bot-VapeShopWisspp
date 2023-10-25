@@ -3,7 +3,7 @@ import sqlite3 as sq
 with sq.connect("db\\database.db") as con:
     cur = con.cursor()
     
-    #cur.execute("DROP TABLE IF EXISTS name_single") #Удаление таблицы
+    
     cur.execute('''CREATE TABLE IF NOT EXISTS name_single (
         user_id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT NOT NULL,
@@ -12,7 +12,7 @@ with sq.connect("db\\database.db") as con:
         number_id INTEGER
     )
     ''')
-    #cur.execute("DROP TABLE IF EXISTS name_liquid")
+    
     cur.execute('''CREATE TABLE IF NOT EXISTS name_liquid (
         user_id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT NOT NULL,
@@ -21,7 +21,7 @@ with sq.connect("db\\database.db") as con:
         number_id INTEGER
     )
     ''')
-    #cur.execute("DROP TABLE IF EXISTS name_stock_all")
+    
     cur.execute('''CREATE TABLE IF NOT EXISTS name_stock_all (
         user_id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT NOT NULL,
