@@ -52,9 +52,7 @@ def sql_name_stock_all(next_id):
         result_stock = cur.fetchall()
         return result_stock[0][0], result_stock[0][1]
     
-#INSERT INTO users(name, price, number) VALUES("AL", 100, 2341)
-#SELECT name, price, number FROM users
-#SELECT * FROM users WHERE price < 100
+
 
 
 
