@@ -4,7 +4,6 @@ from db.sql_files import sql_name_single, sql_name_liquid, sql_name_stock_all
 from keyboard import markup_start, markup_menu, markup_applic, markup_rem, markup_catalog, markup_catalog_1, markup_catalog_2, markup_catalog_3, markup_stocks, markup_continue, markup_basket
 #from user_file_id import users_file, users_input_consol, users_id_all
 from buy import store_buy, applic, product_save
-from background import keep_alive
 import time
 import datetime
 from week import day_week, dostavka
@@ -230,5 +229,4 @@ def sent_form(message):
     bot.register_next_step_handler(message, fio)
     bot.send_message(message.chat.id, f"Ваше ФИО:\n", reply_markup=markup_rem)
 
-keep_alive()
 bot.infinity_polling()
